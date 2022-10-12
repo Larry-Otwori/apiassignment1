@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Task App</title>
+    <link rel="stylesheet" href=style.css">
+</head>
+<body>
+    <header>
+        <h1 class="task_list_main">My Task Planner</h1>
+        <form name="task_form" id="new_task_form" class="new_task_form">
+            <input type="text" name="new-task-input" id="new-task-input" class="task-input"
+            placeholder="What do you have planned?">
+            <input type="submit" value="Add Task" id="new-task-submit" class="task-add">
+        </form>
+
+    </header>
+
+    <main>
+        <section class="task_list">
+            <h2 class="task_list_header">My Current Task</h2>
+            <div class="tasks" id="tasks"></div>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script> //note that location of script link is crucial
+</body>
+</html>

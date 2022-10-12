@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    /**/
+    /**/
+    /**/
+    box-sizing: border-box; /* box sizing is used to account for padding, border and margin of a 'content box'. Expound*/
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+     /*felx property sets flexible length on flexible items*/
+    /*display: flex direction displays elemet as a block level flex container*/
+    min-height: 100vh;
+     /*sets minimal vh*/
+    /*adopts height to viewport*/
+    color: rgb(227, 67, 67);
+    background-color: #374151;
+}
+
+header{
+    /*rem unit means root element's font size. Expound*/
+    padding: 2rem 1rem;
+    max-width: 800px; /*means specified unit's widht is going to be 8800*/
+    width: 100%;
+    margin: 0% auto;
+    /*inserts margin*/
+
+}
+
+/*h1*/ .task_lisst_main{
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 300; 
+    /*thickness of font*/
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    /*separation between heading and form*/
+    text-align: center;
+
+}
+
+.new_task_form{
+    display: flex;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+
+}
+
+.task-input::placeholder/*shows placeholder within task input*/{
+    color: brown;
+}
+
+.task-add{
+    color: whitesmoke;
+    width: 100px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #3486f8;
+    border-radius: 1.1rem;
+    cursor: pointer;
+    transition: 0.4s;/*behaviour potrayed when you hover over icon*/
+
+}
+
+
+/*pseudo class used to define special state of an element*/
+/* - style element when user moves mouse over it*/
+/*style visited and unvisited links differrently*/
+/*style element whem it gets focus*/
+
+.task-add:hoevr{
+    opacity: 0.8;
+}
+
+.task-add:active{
+    opacity: 0.5;
+}
+
+.task_lsit{
+    padding: 1rem;
+
+}
+
+.task_lsit > h2 /*get into tasklist and look for h2 that is a child of tasklist*/{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: whitesmoke;
+    margin-bottom: 1rem;/*add margin to separate from everything below it*/
+}
