@@ -7,13 +7,28 @@ window.addEventListener('load', ()=>{
     form.addEventListener('submit', (e)=>{ //this line means listen in on the event called submit, denoted as e
         e.preventDefault();  //default behaviour prevented
 
-        const task = input.value; // variable that us goint to take the value in the input field
+        const task = input.value; // variable that is going to take the value in the input field
         const task_el = document.createElement('div'); //allows to create a new div element
-        task_el.classList.add('task'); // take task ekement div and assign task
+        task_el.classList.add('task'); // take task element div and assign task
 
         const task_content_el = document.createElement('div');
         task_content_el.classList.add('content');
+
+
+
         
+        //alert if empty task is added
+        if(document.getElementById("new-task-input").value.length == 0)
+        {
+              window.alert("EMPTY! KINDLY ADD A TASK")
+              return false;
+        }
+
+
+
+
+
+
         
         // pick created element above and send it to where you want it appended (below line)
         task_el.appendChild(task_content_el);
@@ -28,7 +43,7 @@ window.addEventListener('load', ()=>{
         task_content_el.appendChild(task_input_el);
 
         //create the edit and delete buttons by creating elemetns. could not be done in html because in this case the tasks are a dynamic process
-        //since the nutton appears in list input field, append to the list inputfield
+        //since the button appears in list input field, append to the list inputfield
 
         const task_action_el = document.createElement('div');
         task_action_el.classList.add('actions');
