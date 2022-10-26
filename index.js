@@ -4,10 +4,26 @@ window.addEventListener('load', ()=>{
     const list_el = document.querySelector('#tasks'); //names assigned in brackets are declared in HTML first
 
 
+
+    //variable to add conter for the task added
+    var counter = 0;
+
+
+
+
     form.addEventListener('submit', (e)=>{ //this line means listen in on the event called submit, denoted as e
+
+
+
+
+        counter++; //added with counter
+
+
+
+
         e.preventDefault();  //default behaviour prevented
 
-        const task = input.value; // variable that is going to take the value in the input field
+        const task = counter+'.'+input.value; // variable that is going to take the value in the input field **added with counter
         const task_el = document.createElement('div'); //allows to create a new div element
         task_el.classList.add('task'); // take task element div and assign task
 
