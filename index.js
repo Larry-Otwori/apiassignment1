@@ -23,7 +23,7 @@ window.addEventListener('load', ()=>{
 
         e.preventDefault();  //default behaviour prevented
 
-        const task = counter+'.'+input.value; // variable that is going to take the value in the input field **added with counter
+        const task = counter+'.'+input.value; // variable that is going to take the value in the input field **added with counter 
         const task_el = document.createElement('div'); //allows to create a new div element
         task_el.classList.add('task'); // take task element div and assign task
 
@@ -36,7 +36,7 @@ window.addEventListener('load', ()=>{
         //alert if empty task is added
         if(document.getElementById("new-task-input").value.length == 0)
         {
-              window.alert("EMPTY! KINDLY ADD A TASK")
+              window.alert("Cannot add empty tasks! Please input task")
               return false;
         }
 
